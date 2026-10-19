@@ -3,9 +3,9 @@ contact_links:
   - name: Question or idea
     url: https://github.com/orgs/perfect-soft/discussions
     about: Ask questions and share ideas in Discussions.
-  - name: Licences, trials, commercial support
-    url: mailto:support@pstreamer.tv
-    about: Write to support@pstreamer.tv.
+  - name: Pre-sales consultation and purchase
+    url: https://support.pstreamer.tv/crm/support/new/purchase
+    about: Prices, payment, a quote or a trial. No password needed.
   - name: Documentation
     url: https://doc2.pstreamer.tv/en/
     about: Installation, configuration and the HTTP API.

@@ -5,7 +5,7 @@ SRT, RIST, Pro-MPEG FEC, UDP/RTP multicast, HLS / DASH, and the proprietary **Pe
 point-to-point delivery without expensive dedicated links. It runs on Linux (RHEL / AlmaLinux and Debian / Ubuntu) and is
 managed from a web UI and an HTTP API.
 
-[Website](https://pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Support](mailto:support@pstreamer.tv)
+[Website](https://pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Pre-sales & purchase](https://support.pstreamer.tv/crm/support/new/purchase) · [Support](mailto:support@pstreamer.tv)
 
 ![Streams list](assets/streams-list.png)
 
@@ -23,7 +23,7 @@ managed from a web UI and an HTTP API.
 - **OTT:** HLS, MPEG-DASH, WebVTT subtitles from teletext.
 - **Transcoding:** NVIDIA NVENC, Intel VPL and software (CPU) transcoders as separate packages.
 
-Version 2.x adds Meshwork (a cluster of streamers managed from one UI), Low-Latency HLS / DASH on CMAF, DVR / timeshift,
+The current version, **Perfect Streamer Meshwork** (2.x), adds Meshwork clustering (streamers managed from one UI), Low-Latency HLS / DASH on CMAF, DVR / timeshift,
 and a new web UI.
 
 <table>
@@ -37,11 +37,11 @@ and a new web UI.
   </tr>
 </table>
 
-*Screenshots: Perfect Streamer 2.x web UI.*
+*Screenshots: Perfect Streamer Meshwork web UI.*
 
 ## Editions
 
-| | Free demo (1.x) | Trial (2.x) | Licensed (2.x) |
+| | Free demo (1.x) | Perfect Streamer Meshwork trial | Perfect Streamer Meshwork licence |
 |---|---|---|---|
 | Where | this page, [Releases](https://github.com/perfect-soft/perfect-streamer/releases) | package repository | package repository |
 | Streams | up to 10 | unlimited | per licence |
@@ -49,9 +49,11 @@ and a new web UI.
 | Time limit | none | 30 days | per licence |
 | Licence | [Demo licence](LICENSE.md): evaluation, non-commercial | EULA | EULA |
 
-For production use, a trial or a licence, write to [support@pstreamer.tv](mailto:support@pstreamer.tv).
+**Pre-sales consultation and purchase:** [send a request](https://support.pstreamer.tv/crm/support/new/purchase) (prices, payment, a quote, the trial). No password is needed:
+you confirm your email with a code, and the sales team answers in your request and by email. Or write to
+[support@pstreamer.tv](mailto:support@pstreamer.tv).
 
-## Install the current version (2.x, trial)
+## Install Perfect Streamer Meshwork (2.x, trial)
 
 The package repository works over HTTPS; packages and metadata are signed with the key
 **Perfect Streamer Repository &lt;support@pstreamer.tv&gt;**, fingerprint
@@ -116,6 +118,7 @@ tail -n 20 /var/log/pss/main.log  # application log
 
 - Questions and ideas: [Discussions](https://github.com/orgs/perfect-soft/discussions)
 - Bugs in the demo: [Issues](https://github.com/perfect-soft/perfect-streamer/issues)
+- Pre-sales consultation, prices and purchase: [request form](https://support.pstreamer.tv/crm/support/new/purchase)
 - Commercial questions, licences, trials: [support@pstreamer.tv](mailto:support@pstreamer.tv)
 - Community: [forum](https://forum.pstreamer.tv/), [Telegram](https://t.me/PerfectStreamer)
 
