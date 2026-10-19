@@ -1,0 +1,35 @@
+name: Bug in the free demo
+description: Something in the demo does not work as documented.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `pss --version`.
+      placeholder: "pss: 1.12.3.444"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "AlmaLinux 9.4 / Ubuntu 24.04"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Last lines of `journalctl -u pss -n 50` and `/var/log/pss/main.log`. Remove passwords and addresses you do not want to publish.
+      render: text

@@ -1,101 +1,123 @@
-## Introduction
-Perfect Streamer® is software for delivering digital streams of television channels via public Internet network anywhere in the world in Point-to-Point mode.
+# Perfect Streamer — IPTV / OTT streaming server for broadcast delivery
 
-It uses proprietary protocol Perfect Stream that ensures reliable and stable video stream delivery without using expensive networks.
+**Perfect Streamer®** is professional software for delivering TV channels over the public Internet and IP networks:
+SRT, RIST, Pro-MPEG FEC, UDP/RTP multicast, HLS / DASH, and the proprietary **Perfect Stream (PS1)** protocol for reliable
+point-to-point delivery without expensive dedicated links. It runs on Linux (RHEL / AlmaLinux and Debian / Ubuntu) and is
+managed from a web UI and an HTTP API.
 
-Also, standard transport protocols Pro-MPEG, SRT and RIST are supported. This allows to organize channels both via Perfect Streamer® and other software or hardware supporting the protocols.
+[Website](https://pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Support](mailto:support@pstreamer.tv)
 
-Perfect Streamer® is a powerful software for delivering video streams over the public Internet using the transport protocols SRT, RIST, HLS, ProMpeg, PS1 and many others. 
-The program has the functionality of stream reservation, EPG server, Multiplexor and Demultiplexor, EIT generator, professional analyzer, charts, AES encryption, mosaic, modification of metadata in MPEG-TS, works with DVB cards, etc. Unique functions of stream synchronization and jitter elimination, correction of PCR marks in the video stream. 
+![Streams list](assets/streams-list.png)
 
-Transcoder supporting Nvidia Encoder and Software CPU methods.
+## Features
 
-Integration with monitoring systems Zabbix, Grafana and others. There is a free Demo version for 10 streams and a fully functional paid version.
+- **Transport protocols:** Perfect Stream (PS1), SRT (caller / listener / rendezvous, AES), RIST, Pro-MPEG FEC,
+  UDP / RTP unicast and multicast (IGMP v3 SSM), TCP, HTTP, HLS and RTSP input.
+- **Stream reliability:** input failover with backup sources, jitter elimination and stream synchronization,
+  PCR correction and restamping.
+- **MPEG-TS processing:** MPTS multiplexer and demultiplexer (T-STD / TR 101 290 compliant), PID remapping,
+  metadata (PSI/SI) modification, EIT generator, EPG server (XMLTV), AES encryption, mosaic.
+- **Analysis and monitoring:** real-time TR 101 290 analyzer, per-PID bitrate statistics, charts, alerts;
+  Zabbix, Prometheus, Telegraf / InfluxDB and Grafana integration.
+- **DVB:** DVB-S/S2, DVB-C, DVB-T/T2 cards and ASI devices, DVB scanner, BISS-1 / BISS-E descrambling, multi-stream T2-MI.
+- **OTT:** HLS, MPEG-DASH, WebVTT subtitles from teletext.
+- **Transcoding:** NVIDIA NVENC, Intel VPL and software (CPU) transcoders as separate packages.
 
-You can find our site [here](https://pstreamer.tv) or read the [documentation](http://doc.pstreamer.tv/en/index.html).
+Version 2.x adds Meshwork (a cluster of streamers managed from one UI), Low-Latency HLS / DASH on CMAF, DVR / timeshift,
+and a new web UI.
 
-## Demo version features
-- Limited by 10 streams
-- Software CPU transcoding method only
-- No limitations of functionality
-- No time limitations
+<table>
+  <tr>
+    <td><img src="assets/meshwork-topology.png" alt="Meshwork topology: five streamers linked over PS1, SRT and UDP"></td>
+    <td><img src="assets/pipeline-stream.png" alt="Signal path of a stream: inputs with failover, outputs, OTT and MPTS"></td>
+  </tr>
+  <tr>
+    <td><img src="assets/stream-stats.png" alt="Live stream statistics with bitrate chart and continuity counters"></td>
+    <td><img src="assets/stream-tr290.png" alt="TR 101 290 analysis report with priority 1 and 2 checks"></td>
+  </tr>
+</table>
 
-Demo versions are published in this repository [releases](https://github.com/PFStreamer/releases/releases).
+*Screenshots: Perfect Streamer 2.x web UI.*
 
-There is also 30-days trial-version without any limitations.
+## Editions
 
-## Installation of paid version
+| | Free demo (1.x) | Trial (2.x) | Licensed (2.x) |
+|---|---|---|---|
+| Where | this page, [Releases](https://github.com/perfect-soft/perfect-streamer/releases) | package repository | package repository |
+| Streams | up to 10 | unlimited | per licence |
+| Transcoding | software (CPU) | all transcoders | all transcoders |
+| Time limit | none | 30 days | per licence |
+| Licence | [Demo licence](LICENSE.md): evaluation, non-commercial | EULA | EULA |
 
-### Install to RHEL family
+For production use, a trial or a licence, write to [support@pstreamer.tv](mailto:support@pstreamer.tv).
 
-Install pstreamer repo (RHEL 7):
-```
-$ sudo yum-config-manager --add-repo=http://repo.pstreamer.tv/pub/pstreamer/pstreamer.repo
-```
-or RHEL 8 and 9:
-```
-$ sudo yum config-manager --add-repo=http://repo.pstreamer.tv/pub/pstreamer/pstreamer.repo
-```
+## Install the current version (2.x, trial)
 
-Install pstreamer:
-```
-$ sudo yum -y install pstreamer
-```
+The package repository works over HTTPS; packages and metadata are signed with the key
+**Perfect Streamer Repository &lt;support@pstreamer.tv&gt;**, fingerprint
+`E391 9454 BFD9 DEA4 6CDE C886 5BDD 7AE6 BEB5 D084`.
 
-Complete remove:
-```
-$ sudo yum -y remove pstreamer aksusbd
-```
+**RHEL / AlmaLinux / Rocky 8+:**
 
-### Install to Debian family (Ubuntu etc.)
-
-```
-$ sudo wget http://repo.psts.info/pub/deb/dists/pstreamer/pstreamer.list -O /etc/apt/sources.list.d/pstreamer.list     
-$ sudo apt-get update
-$ sudo apt-get install pstreamer
-```
-Complete remove:
-```
-$ sudo apt-get remove pstreamer aksusbd
-```
-### After the installation
-
-Files:
-```
-/usr/local/bin/pss - pstreamer binary file
-/opt/pss/config/pss.properties - global options
-/opt/pss/config/pss_default.json - default configuration file
-/usr/lib/systemd/system/pss.service - systemd service file
-/var/log/pss - directory log files location
-```
-After install new package make trial activation:
-```
-$ /opt/pss/tools/activate.sh
-```
-After install new package use default web access:
-* port: 8808
-* login: admin
-* password: admin
-
-Service manipulations:
-```
-$ systemctl stop pss
-$ systemctl start pss
-$ systemctl restart pss
-$ systemctl status pss
+```sh
+sudo dnf config-manager --add-repo=https://repo.pstreamer.tv/pub/pstreamer/pstreamer2.repo
+sudo dnf -y install pstreamer
+sudo /opt/pss/tools/activate.sh        # applies the 30-day trial licence and starts the service
 ```
 
-Hasp package: **aksusbd**
+**Debian / Ubuntu:**
 
-Hasp services: **hasplmd aksusbd**
-
-If have start problem see log:
-```
-$ tail -n 20 /var/log/pss/main.log
-$ journalctl -u pss -n 20
-```
-Check installed binary:
-```
-$ pss -h
+```sh
+sudo wget https://repo.pstreamer.tv/pub/pstreamer-archive-keyring.gpg -O /usr/share/keyrings/pstreamer-archive-keyring.gpg
+sudo wget https://repo.pstreamer.tv/pub/deb/dists/pstreamer/pstreamer2.list -O /etc/apt/sources.list.d/pstreamer2.list
+sudo apt-get update && sudo apt-get install -y pstreamer
+sudo /opt/pss/tools/activate.sh
 ```
 
+Then open `http://<server>:8808` (login `admin`, password `admin`) and change the password.
+Full guide, RHEL 7 and other systems: [installation](https://doc2.pstreamer.tv/en/manual/install/index.html).
+
+## Install the free demo (1.x)
+
+Download the `.rpm` or `.deb` of the [demo release](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1), or install
+the newest demo build (1.12.3) from the 1.x repository:
+
+```sh
+# RHEL / AlmaLinux / Rocky 8+
+sudo dnf config-manager --add-repo=https://repo.pstreamer.tv/pub/pstreamer/pstreamer.repo
+sudo dnf -y install pstreamer-demo
+
+# Debian / Ubuntu
+sudo wget https://repo.pstreamer.tv/pub/pstreamer-archive-keyring.gpg -O /usr/share/keyrings/pstreamer-archive-keyring.gpg
+sudo wget https://repo.pstreamer.tv/pub/deb/dists/pstreamer/pstreamer.list -O /etc/apt/sources.list.d/pstreamer.list
+sudo apt-get update && sudo apt-get install -y pstreamer-demo
+```
+
+The demo needs no licence key and starts right after installation. Web UI: `http://<server>:8808`, login `admin` /
+`admin`. Documentation of the 1.x line: [doc.pstreamer.tv](https://doc.pstreamer.tv/en/index.html).
+
+## After installation
+
+| Path | Content |
+|---|---|
+| `/usr/local/bin/pss` | the server binary |
+| `/opt/pss/config/pss.properties` | global options |
+| `/opt/pss/config/pss_default.json` | default configuration |
+| `/usr/lib/systemd/system/pss.service` | systemd unit |
+| `/var/log/pss/` | logs |
+
+```sh
+systemctl status pss              # service state
+journalctl -u pss -n 20           # why the service did not start
+tail -n 20 /var/log/pss/main.log  # application log
+```
+
+## Support
+
+- Questions and ideas: [Discussions](https://github.com/orgs/perfect-soft/discussions)
+- Bugs in the demo: [Issues](https://github.com/perfect-soft/perfect-streamer/issues)
+- Commercial questions, licences, trials: [support@pstreamer.tv](mailto:support@pstreamer.tv)
+- Community: [forum](https://forum.pstreamer.tv/), [Telegram](https://t.me/PerfectStreamer)
+
+© Perfect Soft LLC. Perfect Streamer® is a registered trademark. The software is distributed under the
+[demo licence](LICENSE.md) (free demo) or the EULA (licensed versions); the source code is not published.
