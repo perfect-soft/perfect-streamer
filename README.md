@@ -5,7 +5,7 @@ SRT, RIST, Pro-MPEG FEC, UDP/RTP multicast, HLS / DASH, and the proprietary **Pe
 point-to-point delivery without expensive dedicated links. It runs on Linux (RHEL / AlmaLinux and Debian / Ubuntu) and is
 managed from a web UI and an HTTP API.
 
-[Website](https://pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Pre-sales & purchase](https://support.pstreamer.tv/crm/support/new/purchase) · [Support](mailto:support@pstreamer.tv)
+[Website](https://pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Help Center](https://support.pstreamer.tv/) · [Pre-sales & purchase](https://support.pstreamer.tv/crm/support/new/purchase) · [Support](mailto:support@pstreamer.tv)
 
 ![Streams list](assets/streams-list.png)
 
@@ -49,8 +49,9 @@ and a new web UI.
 | Time limit | none | 30 days | per licence |
 | Licence | [Demo licence](LICENSE.md): evaluation, non-commercial | EULA | EULA |
 
-**Pre-sales consultation and purchase:** [send a request](https://support.pstreamer.tv/crm/support/new/purchase) (prices, payment, a quote, the trial). No password is needed:
-you confirm your email with a code, and the sales team answers in your request and by email. Or write to
+**Pre-sales consultation and purchase:** [send a request](https://support.pstreamer.tv/crm/support/new/purchase) in the [Perfect Streamer Help Center](https://support.pstreamer.tv/) (prices, payment, a quote, the trial).
+No password is needed: confirm with your Google account (Gmail or Google Workspace) or with a code sent to your email;
+the sales team answers in your request and by email. Or write to
 [support@pstreamer.tv](mailto:support@pstreamer.tv).
 
 ## Install Perfect Streamer Meshwork (2.x, trial)
@@ -118,7 +119,7 @@ tail -n 20 /var/log/pss/main.log  # application log
 
 - Questions and ideas: [Discussions](https://github.com/orgs/perfect-soft/discussions)
 - Bugs in the demo: [Issues](https://github.com/perfect-soft/perfect-streamer/issues)
-- Pre-sales consultation, prices and purchase: [request form](https://support.pstreamer.tv/crm/support/new/purchase)
+- Pre-sales consultation, prices and purchase: [request form](https://support.pstreamer.tv/crm/support/new/purchase) in the [Perfect Streamer Help Center](https://support.pstreamer.tv/)
 - Commercial questions, licences, trials: [support@pstreamer.tv](mailto:support@pstreamer.tv)
 - Community: [forum](https://forum.pstreamer.tv/), [Telegram](https://t.me/PerfectStreamer)
 
