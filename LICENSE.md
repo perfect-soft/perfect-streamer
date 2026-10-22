@@ -15,7 +15,7 @@ Perfect Soft LLC
 Jumeirah Lake Towers (JLT)
 Dubai, United Arab Emirates
 
-Website: https://pstreamer.tv
+Website: https://meshwork.pstreamer.tv
 Email: support@pstreamer.tv
 
 By installing, copying, or otherwise using the Software you agree to be bound
