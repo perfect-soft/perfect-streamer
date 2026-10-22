@@ -2,7 +2,7 @@ ENTERPRISE DEMO LICENSE AGREEMENT
 
 Perfect Streamer® DEMO Software
 
-Last Updated: 1 May 2026
+Last Updated: 21 October 2026
 
 This Enterprise Demo License Agreement ("Agreement") governs the use of
 the Perfect Streamer® DEMO Software ("Software"). The DEMO version is
@@ -11,9 +11,7 @@ provided strictly for technical evaluation purposes only.
 Licensor:
 
 Perfect Soft LLC
-203, Platinum Tower
-Jumeirah Lake Towers (JLT)
-Dubai, United Arab Emirates
+203, Platinum Tower, JLT, Dubai, United Arab Emirates
 
 Website: https://meshwork.pstreamer.tv
 Email: support@pstreamer.tv
@@ -26,17 +24,16 @@ or use the Software.
 1. SCOPE OF THE SOFTWARE
 
 This Agreement covers the Perfect Streamer® DEMO core software and the
-accompanying Perfect Streamer® Toolkit utilities distributed alongside it as
-part of the DEMO package, including but not limited to:
+accompanying Perfect Streamer® Toolkit utility distributed alongside it as
+part of the DEMO package:
 
-  * mpts_migrate — MPTS identity capture and migration utility for MPEG-TS streams
   * ts_analyze  — MPEG-TS transport stream analyzer (ETSI TR 101 290 V1.4.1,
                   ISO/IEC 13818-1 T-STD buffer-model validation)
 
-The DEMO core software and the Toolkit utilities are collectively referred to
+The DEMO core software and the Toolkit utility are collectively referred to
 as the "Software" throughout this Agreement. All terms below — including the
 non-commercial, no-production-use, functional-limitations, and competitor
-restrictions — apply equally to the DEMO core software and to each Toolkit
+restrictions — apply equally to the DEMO core software and to the Toolkit
 utility distributed in the DEMO package.
 
 
@@ -60,16 +57,26 @@ or media distribution.
 
 4. FUNCTIONAL LIMITATIONS
 
-The DEMO Software contains intentional limitations including channel and
-session limits, disabled modules, and feature restrictions. Licensee agrees
-not to attempt to bypass, disable, or work around these limitations.
+The DEMO Software contains intentional limitations, including: at most 5
+streams; at most 5 user logins for OTT, PS1 and SRT access, with one
+connection each; one input and one output per stream (no input redundancy);
+single-program transport streams only (no MPTS, multiplexing or
+demultiplexing, no adaptive bitrate); input and output protocols PS1, SRT, UDP
+and RTP only; a basic stream analyzer; OTT delivery without DVR, timeshift or
+archive; a Meshwork of at most 3 nodes without sub-domains; no DVB reception;
+no EPG; software transcoding only; no encryption of links or OTT; no
+monitoring exporters; at most 3 web accounts. Features of the full edition
+that are not listed as available are not included in the DEMO Software.
+Licensee agrees not to attempt to bypass, disable, or work around these
+limitations.
 
 
-5. NO HARDWARE LICENSE KEY
+5. NO LICENSE KEY
 
-The DEMO version operates without a Sentinel HASP hardware key. The absence
-of such a key does not grant any rights to bypass built-in restrictions. Any
-attempt to circumvent internal restrictions is strictly prohibited.
+The DEMO version operates without a Sentinel license key (software or
+hardware). The absence of such a key does not grant any rights to bypass
+built-in restrictions. Any attempt to circumvent internal restrictions is
+strictly prohibited.
 
 
 6. PROHIBITED ACTIVITIES
@@ -98,7 +105,7 @@ interoperability reverse engineering, or development of competing products.
 The Software includes the following third-party components, each subject to
 its own license:
 
-  OpenSSL 3.1.3
+  OpenSSL 3.1.5 (quictls)
     License: Apache License 2.0
     https://www.openssl.org
 
@@ -106,7 +113,7 @@ its own license:
     License: Boost Software License 1.0
     https://pocoproject.org
 
-  SQLite 3.37.2
+  SQLite 3.54.1
     License: Public Domain (https://sqlite.org/copyright.html)
     https://sqlite.org
 
@@ -114,26 +121,25 @@ its own license:
     License: Mozilla Public License 2.0
     https://github.com/Haivision/srt
 
-  RIST 0.2.7
-    License: BSD 2-Clause License
-    https://code.videolan.org/rist
+  ngtcp2 1.13.0 and nghttp3 1.6.0
+    License: MIT License
+    https://github.com/ngtcp2
 
-  FFmpeg 5.1
-    License: LGPL 2.1+ or GPL 2+ (depending on build configuration)
+  FFmpeg 7.1.5 (built without GPL components)
+    License: LGPL 2.1+
     https://ffmpeg.org
 
-  GStreamer (optional, system-provided)
-    License: LGPL 2.1+
-    https://gstreamer.freedesktop.org
+  zlib 1.3.1
+    License: zlib License
+    https://zlib.net
 
-  libdvbpsi 1.3.3
+  libdvbpsi 1.3.0 (parts)
     License: LGPL 2.1+
     https://www.videolan.org/developers/libdvbpsi.html
 
-Optional hardware acceleration components — the NVIDIA Video Codec SDK
-(NVENC/NVDEC), the NVIDIA CUDA Toolkit, and the Intel® oneAPI Video Processing
-Library (oneVPL) — are subject to their respective proprietary SDK license
-terms.
+  GStreamer codec parsers (parts)
+    License: LGPL 2.1+
+    https://gstreamer.freedesktop.org
 
 
 9. EXPORT CONTROL
@@ -167,12 +173,12 @@ LIABILITY SHALL NOT EXCEED FIFTY U.S. DOLLARS (USD 50).
 
 12. TERM AND TERMINATION
 
-The evaluation period for the DEMO Software is ninety (90) days from the date
-of first installation, unless a different term is agreed in writing between
-Licensor and Licensee. This Agreement terminates automatically upon expiry of
-the evaluation period or upon any violation of this Agreement. Upon termination
-Licensee must cease all use of the DEMO Software, uninstall it, and delete all
-copies in Licensee's possession or control.
+The DEMO Software is provided free of charge and without a time limit. This
+Agreement remains in effect until terminated. It terminates automatically upon
+any violation of this Agreement. Licensee may terminate it at any time by
+uninstalling the DEMO Software. Upon termination Licensee must cease all use of
+the DEMO Software, uninstall it, and delete all copies in Licensee's
+possession or control.
 
 
 13. GOVERNING LAW
