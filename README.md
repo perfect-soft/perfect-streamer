@@ -115,6 +115,13 @@ journalctl -u pss -n 20           # why the service did not start
 tail -n 20 /var/log/pss/main.log  # application log
 ```
 
+## Free tools
+
+[**Perfect Streamer Toolkit**](https://github.com/perfect-soft/perfect-streamer-toolkit): open-source (Apache-2.0) command-line tools
+for MPEG transport streams. The first one, **ts_analyze**, checks a live UDP stream or a TS file against ETSI TR 101 290, models the
+T-STD buffers and measures PCR accuracy, with a pass/fail exit code for scripts and monitoring. Static Linux binaries in the
+[releases](https://github.com/perfect-soft/perfect-streamer-toolkit/releases).
+
 ## Support
 
 - Questions and ideas: [Discussions](https://github.com/orgs/perfect-soft/discussions)
