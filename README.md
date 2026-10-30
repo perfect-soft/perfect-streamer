@@ -39,6 +39,29 @@ and a new web UI.
 
 *Screenshots: Perfect Streamer Meshwork web UI.*
 
+## New: Perfect Streamer Meshwork 2.1 beta
+
+Version **2.1** is out as a public **beta** (2.1.0.469) in a separate beta channel of the package repository; the stable
+2.0.2 stays where it is. The beta is for licensed (protected) installations; 2.x licences work on it.
+
+- **Meshwork reserve for multicast outputs:** UDP, RTP and Pro-MPEG outputs of several streamers form one reserve group;
+  one node sends, and if its node, input or output fails another node takes over on the common timeline, without a gap
+  or a duplicate at the receivers.
+- **OTT / DVR reserve for viewers:** an HLS viewer whose node fails keeps watching from another node of the group
+  (Safari / iOS / tvOS, hls.js in browsers, ExoPlayer / Media3); a new viewer of a failed stream and a catch-up request for
+  a period this node has not recorded are redirected to a node that can serve them.
+- **SMPTE ST 2022-7:** RTP and Pro-MPEG inputs take one stream over two network paths and merge them packet by packet.
+- **SMPTE ST 2022-1 FEC:** standard Pro-MPEG FEC on inputs and outputs, with a FEC wait limit and counters.
+- **Reserve events and charts:** every reserve switch is in the stream's event log and on its statistics charts.
+- **TR 101 290:** stricter sync-byte and PCR checks.
+
+[What's new in 2.1](https://doc2.pstreamer.tv/en/manual/whats_new/index.html) ·
+[How the beta programme works and how to leave it](https://doc2.pstreamer.tv/en/manual/extras/beta.html) ·
+[Install from the beta repository](https://doc2.pstreamer.tv/en/manual/install/beta.html) ·
+[Players and the OTT/DVR reserve](https://doc2.pstreamer.tv/en/manual/extras/ott_players.html)
+
+Beta feedback: a request in the [Help Center](https://support.pstreamer.tv/). The beta is supported on a best-effort basis.
+
 ## Editions
 
 | | Free demo (1.x) | Perfect Streamer Meshwork trial | Perfect Streamer Meshwork licence |
