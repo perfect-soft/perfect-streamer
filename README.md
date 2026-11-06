@@ -1,11 +1,15 @@
-# Perfect Streamer — IPTV / OTT streaming server for broadcast delivery
+# Perfect Streamer Meshwork — all-in-one IPTV / OTT head-end software for TV operators
 
-**Perfect Streamer®** is professional software for delivering TV channels over the public Internet and IP networks:
-SRT, RIST, Pro-MPEG FEC, UDP/RTP multicast, HLS / DASH, and the proprietary **Perfect Stream (PS1)** protocol for reliable
-point-to-point delivery without expensive dedicated links. It runs on Linux (RHEL / AlmaLinux and Debian / Ubuntu) and is
-managed from a web UI and an HTTP API.
+**Perfect Streamer Meshwork** (Perfect Streamer®, PSS) is operator-grade streaming server software for TV operators, ISPs and
+OTT services. One Linux install is a complete IPTV / OTT head-end: **DVB-S/S2, DVB-T/T2 and DVB-C ingest** with CI/CAM and BISS
+descrambling, IP ingest (SRT, RIST, UDP/RTP multicast, HLS, RTMP, RTSP and the **Perfect Stream (PS1)** protocol), re-multiplexing
+and MPTS, **transcoding** on NVIDIA or Intel GPUs or the CPU, an **IPTV head-end with multicast and EPG**, **OTT delivery over
+HLS, LL-HLS and MPEG-DASH** with encryption, a **network DVR with catch-up and timeshift of up to 90 days**, and TR 101 290
+monitoring. Several servers form a Meshwork domain with one web console and redundancy across nodes. One licence per server
+includes every feature; a free 30-day trial runs on your own servers. It runs on Linux (RHEL / AlmaLinux and Debian / Ubuntu)
+and is managed from a web UI and an HTTP API.
 
-[Website](https://meshwork.pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Help Center](https://support.pstreamer.tv/) · [Pre-sales & purchase](https://support.pstreamer.tv/crm/support/new/purchase) · [Support](mailto:support@pstreamer.tv)
+[Website](https://meshwork.pstreamer.tv) · [Documentation](https://doc2.pstreamer.tv/en/) · [Download the demo](https://github.com/perfect-soft/perfect-streamer/releases/tag/v1.11.1) · [Pricing](https://meshwork.pstreamer.tv/en/pricing/) · [Free 30-day trial](https://meshwork.pstreamer.tv/en/trial/) · [Help Center](https://support.pstreamer.tv/) · [Pre-sales & purchase](https://support.pstreamer.tv/crm/support/new/purchase) · [Support](mailto:support@pstreamer.tv)
 
 ![Streams list](assets/streams-list.png)
 
@@ -19,8 +23,8 @@ managed from a web UI and an HTTP API.
   metadata (PSI/SI) modification, EIT generator, EPG server (XMLTV), AES encryption, mosaic.
 - **Analysis and monitoring:** real-time TR 101 290 analyzer, per-PID bitrate statistics, charts, alerts;
   Zabbix, Prometheus, Telegraf / InfluxDB and Grafana integration.
-- **DVB:** DVB-S/S2, DVB-C, DVB-T/T2 cards and ASI devices, DVB scanner, BISS-1 / BISS-E descrambling, multi-stream T2-MI.
-- **OTT:** HLS, MPEG-DASH, WebVTT subtitles from teletext.
+- **DVB:** DVB-S/S2, DVB-C, DVB-T/T2 cards and ASI devices, DVB scanner, CI/CAM and BISS-1 / BISS-E descrambling, multi-stream T2-MI.
+- **OTT and DVR:** HLS, LL-HLS, MPEG-DASH on CMAF with ABR and encryption, network DVR with catch-up and timeshift (up to 90 days), WebVTT subtitles.
 - **Transcoding:** NVIDIA NVENC, Intel VPL and software (CPU) transcoders as separate packages.
 
 The current version, **Perfect Streamer Meshwork** (2.x), adds Meshwork clustering (streamers managed from one UI), Low-Latency HLS / DASH on CMAF, DVR / timeshift,
@@ -39,9 +43,9 @@ and a new web UI.
 
 *Screenshots: Perfect Streamer Meshwork web UI.*
 
-## New: Perfect Streamer Meshwork 2.1 beta
+## Perfect Streamer Meshwork 2.1 beta
 
-Version **2.1** is out as a public **beta** (2.1.0.469) in a separate beta channel of the package repository; the stable
+Version **2.1** is out as a public **beta** (Beta 2, 2.1.1.537) in a separate beta channel of the package repository; the stable
 2.0.2 stays where it is. The beta is for licensed (protected) installations; 2.x licences work on it.
 
 - **Meshwork reserve for multicast outputs:** UDP, RTP and Pro-MPEG outputs of several streamers form one reserve group;
@@ -71,6 +75,8 @@ Beta feedback: a request in the [Help Center](https://support.pstreamer.tv/). Th
 | Transcoding | software (CPU) | all transcoders | all transcoders |
 | Time limit | none | 30 days | per licence |
 | Licence | [Demo licence](LICENSE.md): evaluation, non-commercial | EULA | EULA |
+
+**Prices:** [yearly and perpetual licences per server](https://meshwork.pstreamer.tv/en/pricing/), every feature included.
 
 **Pre-sales consultation and purchase:** [send a request](https://support.pstreamer.tv/crm/support/new/purchase) in the [Perfect Streamer Help Center](https://support.pstreamer.tv/) (prices, payment, a quote, the trial).
 No password is needed: confirm with your Google account (Gmail or Google Workspace) or with a code sent to your email;
