@@ -45,8 +45,23 @@ and a new web UI.
 
 ## Perfect Streamer Meshwork 2.1 beta
 
-Version **2.1** is out as a public **beta** (Beta 2, 2.1.1.537) in a separate beta channel of the package repository; the stable
-2.0.2 stays where it is. The beta is for licensed (protected) installations; 2.x licences work on it.
+Version **2.1** is out as a public **beta**: **Beta 3, 2.1.2.653** (package 2.1.2.653-1, 2026-11-16), in a separate beta
+channel of the package repository. The stable version stays **2.0.2.423** (package 2.0.2.423-2). The beta is for licensed
+(protected) installations; 2.x licences work on it. The free demo is not in the beta channel: `pstreamer-demo` stays on 2.0.2.
+
+New in Beta 3:
+
+- **RTMP and RTMPS publishing:** software and hardware encoders publish streams to the node's own RTMP server.
+- **Archive:** export a fragment to an MPEG-TS or MP4 file without transcoding; the real broadcast time in archive playback.
+- **Console player:** watch a stream or an adaptive bundle right in the browser, the way a viewer sees it.
+- **Adaptive bundles:** a compatibility check of the variants for players, the variant order, and viewer failover to a
+  backup node.
+- **Domain library:** external sources on the Topology graph (folded in a large domain, hidden with a switch) and a new
+  stream from a library entry in one step.
+- **PSE2 encryption** for Pro-MPEG and PS1, and alerts to team messengers over a webhook.
+- **Test instance** next to a production node: try a new build without stopping the service.
+
+Also in 2.1:
 
 - **Meshwork reserve for multicast outputs:** UDP, RTP and Pro-MPEG outputs of several streamers form one reserve group;
   one node sends, and if its node, input or output fails another node takes over on the common timeline, without a gap
@@ -59,7 +74,22 @@ Version **2.1** is out as a public **beta** (Beta 2, 2.1.1.537) in a separate be
 - **Reserve events and charts:** every reserve switch is in the stream's event log and on its statistics charts.
 - **TR 101 290:** stricter sync-byte and PCR checks.
 
-[What's new in 2.1](https://doc2.pstreamer.tv/en/manual/whats_new/index.html) ·
+Join the beta channel (the stable repository and key first, see [Install](#install-perfect-streamer-meshwork-2x-trial)):
+
+```sh
+# RHEL / AlmaLinux / Rocky 8+
+sudo dnf config-manager --add-repo=https://repo.pstreamer.tv/pub/pstreamer2-beta/pstreamer2-beta.repo
+sudo dnf install pstreamer
+
+# Debian / Ubuntu
+sudo wget https://repo.pstreamer.tv/pub/deb/dists/pstreamer2-beta/pstreamer2-beta.list -O /etc/apt/sources.list.d/pstreamer2-beta.list
+sudo apt-get update && sudo apt-get install pstreamer
+```
+
+Before moving a stable node to the beta, keep a copy of `/opt/pss/config/pss.json`; with it, going back to the stable
+version keeps every setting.
+
+[What's new in Beta 3](https://doc2.pstreamer.tv/en/manual/whats_new/index.html#whats-new-2-1-2-653) ·
 [How the beta programme works and how to leave it](https://doc2.pstreamer.tv/en/manual/extras/beta.html) ·
 [Install from the beta repository](https://doc2.pstreamer.tv/en/manual/install/beta.html) ·
 [Players and the OTT/DVR reserve](https://doc2.pstreamer.tv/en/manual/extras/ott_players.html)
