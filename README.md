@@ -45,7 +45,7 @@ and a new web UI.
 
 ## Perfect Streamer Meshwork 2.1 beta
 
-Version **2.1** is out as a public **beta**: **Beta 3, 2.1.2.653** (package 2.1.2.653-1, 2026-11-16), in a separate beta
+Version **2.1** is out as a public **beta**: **Beta 3, 2.1.2.656** (package 2.1.2.656-1, 2026-11-18), in a separate beta
 channel of the package repository. The stable version stays **2.0.2.423** (package 2.0.2.423-2). The beta is for licensed
 (protected) installations; 2.x licences work on it. The free demo is not in the beta channel: `pstreamer-demo` stays on 2.0.2.
 
@@ -89,7 +89,7 @@ sudo apt-get update && sudo apt-get install pstreamer
 Before moving a stable node to the beta, keep a copy of `/opt/pss/config/pss.json`; with it, going back to the stable
 version keeps every setting.
 
-[What's new in Beta 3](https://doc2.pstreamer.tv/en/manual/whats_new/index.html#whats-new-2-1-2-653) ·
+[What's new in Beta 3](https://doc2.pstreamer.tv/en/manual/whats_new/index.html#whats-new-2-1-2-656) ·
 [How the beta programme works and how to leave it](https://doc2.pstreamer.tv/en/manual/extras/beta.html) ·
 [Install from the beta repository](https://doc2.pstreamer.tv/en/manual/install/beta.html) ·
 [Players and the OTT/DVR reserve](https://doc2.pstreamer.tv/en/manual/extras/ott_players.html)
