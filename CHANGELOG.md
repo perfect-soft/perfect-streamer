@@ -5,6 +5,17 @@ The full version history is in the documentation:
 - **Perfect Streamer Meshwork (2.x):** [What's new](https://doc2.pstreamer.tv/en/manual/whats_new/index.html)
 - **Version 1.x and the free demo:** [What's new](https://doc.pstreamer.tv/en/manual/whats_new.html)
 
+## 2.1.2.658 — Beta 3 (update) (2026-11-18)
+
+An update of Beta 3 in the beta channel `pstreamer2-beta` (package 2.1.2.658-1; it includes 2.1.2.657). The stable version
+stays 2.0.2.423. Full list: [What's new, 2.1.2 — Beta 3](https://doc2.pstreamer.tv/en/manual/whats_new/index.html#whats-new-2-1-2-658).
+
+- SRT output in listen mode with many clients: clients reconnect much faster after a mass drop; a full output queue no
+  longer drops all clients («Queue full»); one slow client no longer slows the others; fewer log lines while the port is
+  waited for after a restart.
+- Input fallback: switching back to a main input that is an SRT caller now holds instead of falling back to the backup
+  again. Workaround for older versions: `max-conn-srt: 2` for the login the main input uses.
+
 ## 2.1.2.656 — Beta 3 (update) (2026-11-18)
 
 An update of Beta 3 in the beta channel `pstreamer2-beta` (package 2.1.2.656-1). The stable version stays 2.0.2.423. Full
